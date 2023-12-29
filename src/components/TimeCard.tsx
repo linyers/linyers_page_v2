@@ -3,10 +3,13 @@
 import { isAfter, add, getTime } from "date-fns";
 // import { DayComponent, NightComponent } from ".";
 
-import { fetchTime } from "@/lib/data";
+import { fetchTime, fetchWeather } from "@/lib/data";
+import NightComponent from "./NightComponent";
+import DayComponent from "./DayComponent";
 
 export default async function TimeCard() {
   const { data } = await fetchTime();
+  const weather = await fetchWeather();
 
   const [sunriseTime, sunsetTime] = (() => {
     if (!data) return [null, null];
@@ -25,23 +28,10 @@ export default async function TimeCard() {
     return "night";
   };
 
-  // const timeComponent = useMemo(() => {
-  //   if (!data) return null;
-
-  //   if (isAfter(new Date(), add(sunsetTime, { hours: 1 }))) {
-  //     return <NightComponent />;
-  //   }
-
-  //   if (isAfter(new Date(), sunriseTime)) {
-  //     return <DayComponent />;
-  //   }
-
-  //   return <NightComponent />;
-  // }, [data]);
-
   return (
-    <div className={`rounded-3xl flex relative overflow-hidden col-span-2`}>
+    <div className={`rounded-3xl flex relative overflow-hidden aspect-square`}>
       {/* {timeComponent} */}
+      <DayComponent weather={weather} />
     </div>
   );
 }

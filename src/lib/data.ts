@@ -42,3 +42,10 @@ export async function fetchTime() {
   );
   return time;
 }
+
+export async function fetchWeather() {
+  const weather = await axios.get(
+    `https://api.openweathermap.org/data/2.5/weather?q=santiago+del+estero,argentina&appid=${process.env.WEATHER_KEY}&units=metric`
+  );
+  return weather;
+}

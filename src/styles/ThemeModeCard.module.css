@@ -92,9 +92,3 @@
   font-size: calc(0.6 * var(--size));
   line-height: 0;
 }
-
-@media (max-width: 768px) {
-  .checkbox-wrapper-5 .check {
-    rotate: -90deg;
-  }
-}

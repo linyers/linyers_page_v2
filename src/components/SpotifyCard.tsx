@@ -11,7 +11,7 @@ export default async function SpotifyCard() {
   const data = await fetchSpotifyPlaying();
 
   return (
-    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-2 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
+    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-1 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
       <div className="absolute right-3 md:static">
         <a
           href={data?.external_urls.spotify}
