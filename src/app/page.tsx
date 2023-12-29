@@ -11,8 +11,9 @@ import {
   ProjectsCard,
   SkillsCard,
   SpotifyCard,
+  SpotifyCardSkeleton,
   ThemeModeCard,
-  WeatherCard,
+  TimeCard,
 } from "@/components/index";
 import { Suspense } from "react";
 
@@ -33,7 +34,13 @@ export default function Home() {
       <Suspense fallback={<DiscordCardSkeleton />}>
         <DiscordCard />
       </Suspense>
-      <SpotifyCard />
+      <EmailCard />
+      <Suspense fallback={<SpotifyCardSkeleton />}>
+        <SpotifyCard />
+      </Suspense>
+      <Suspense fallback={<DiscordCard />}>
+        <TimeCard />
+      </Suspense>
     </main>
   );
 }

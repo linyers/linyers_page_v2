@@ -4,7 +4,7 @@ import { MdEmail, MdOpenInNew } from "react-icons/md";
 export default function EmailCard() {
   return (
     <a
-      href="mailto:orminamadro@gmail.com"
+      href="mailto:linyers666@gmail.com"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Email"
