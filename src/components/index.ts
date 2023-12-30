@@ -10,6 +10,7 @@ import EmailCard from "./EmailCard";
 import SkillsCard from "./SkillsCard";
 import GithubCard from "./GithubCard";
 import TimeCard from "./TimeCard";
+import TimeCardSkeleton from "./TimeCardSkeleton";
 // import DayComponent from "./DayComponent";
 // import NightComponent from "./NightComponent";
 import ProjectsCard from "./ProjectsCard";
@@ -29,6 +30,7 @@ export {
   SkillsCard,
   GithubCard,
   TimeCard,
+  TimeCardSkeleton,
   // DayComponent,
   // NightComponent,
   ProjectsCard,

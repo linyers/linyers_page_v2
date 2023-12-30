@@ -5,6 +5,7 @@
 // import Image from "next/image";
 import { BsDiscord } from "react-icons/bs";
 import { fetchDiscordStatus } from "../lib/data";
+import { MdOpenInNew } from "react-icons/md";
 
 export default async function DiscordCard() {
   const status = await fetchDiscordStatus();
@@ -30,14 +31,18 @@ export default async function DiscordCard() {
   // }, [i18n]);
 
   return (
-    <div
-      className={`text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm ${getBgClass(
+    <a
+      href="https://discord.com/users/948009520850931722"
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm cursor-pointer scale-[100%] hover:scale-[103%] transition duration-300 ease-in-out ${getBgClass(
         status
       )}`}
     >
       <div className="absolute inset-0 flex items-center justify-center text-md md:text-2xl xl:text-3xl font-bold">
         <div className="flex items-center gap-3">
-          <p className="flex gap-1 md:gap-2 justify-center items-center">
+          <MdOpenInNew className="absolute right-4 bottom-4 top-auto md:right-8 md:top-8 text-xl text-white dark:text-[#ffffffaa]" />
+          <p className="flex gap-1 md:gap-2 justify-center items-center capitalize">
             <BsDiscord /> {status}
           </p>
         </div>
@@ -65,6 +70,6 @@ export default async function DiscordCard() {
           )}
         </div>
       )} */}
-    </div>
+    </a>
   );
 }

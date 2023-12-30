@@ -7,7 +7,7 @@ import { BsFillPauseFill, BsFillPlayFill, BsSpotify } from "react-icons/bs";
 export default function SpotifyCard() {
   // const [t, i18n] = useTranslation("global");
   return (
-    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-2 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
+    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-1 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
       <div className="absolute invisible md:visible md:static">
         <a
           href="#"
