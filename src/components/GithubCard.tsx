@@ -1,11 +1,12 @@
 import Image from "next/image";
-// import { useTranslation } from "react-i18next";
+import { useTranslations } from "next-intl";
 
 import github from "../assets/images/github.gif";
 import { MdOpenInNew } from "react-icons/md";
 
 export default function GithubCard() {
-  // const [t, i18n] = useTranslation("global");
+  const t = useTranslations("Github");
+
   return (
     <a
       href="https://github.com/linyers"
@@ -29,8 +30,7 @@ export default function GithubCard() {
               Github
             </h2>
             <p className="text-white text-sm md:text-md lg:text-2xl">
-              {/* {t("github") */}
-              Mi perfil de Github, donde comparto algunos de mis proyectos.
+              {t("description")}
             </p>
           </div>
         </div>

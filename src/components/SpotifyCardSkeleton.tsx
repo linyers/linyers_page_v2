@@ -1,11 +1,12 @@
 import Image from "next/image";
 import styles from "@/styles/SpotifyCard.module.css";
 import skelton from "../assets/images/skeleton.gif";
-// import { useTranslation } from "react-i18next";
-import { BsFillPauseFill, BsFillPlayFill, BsSpotify } from "react-icons/bs";
+import { useTranslations } from "next-intl";
+import { BsSpotify } from "react-icons/bs";
 
 export default function SpotifyCard() {
-  // const [t, i18n] = useTranslation("global");
+  const t = useTranslations("Spotify");
+  const tGlobal = useTranslations("Global");
   return (
     <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-1 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
       <div className="absolute invisible md:visible md:static">
@@ -23,13 +24,11 @@ export default function SpotifyCard() {
 
       <div className={styles.card__body}>
         <p className="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">
-          {/* {t("spotify.current")} */}
-          Escuchado recientemente...
+          {t("title")}
         </p>
         <div className="flex mb-2 flex-col">
-          {/* <p>{isLoading && t("loading")}</p> */}
           <p className="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">
-            Cargando...
+            {tGlobal("loading")}
           </p>
         </div>
         <div id="audiovisual" className={styles.audiovisual}>

@@ -1,0 +1,26 @@
+{
+  "About": {
+    "title": "Ariel Ignacio Jimenez",
+    "description": "I am an experienced <b>fullstack developer</b> proficient in the use of <b>Django</b> and <b>React</b>. I am capable of building robust <b>APIs</b> with <b>Django Rest Framework</b>, and I also have strong skills in frontend technologies such as <b>CSS</b>, <b>HTML</b>, and <b>JavaScript</b>."
+  },
+  "Age": {
+    "age": "AGE",
+    "years": "YEARS"
+  },
+  "Exp": {
+    "exp": "YEARS OF EXPERIENCE"
+  },
+  "Github": {
+    "description": "My GitHub profile, where I share some of my projects."
+  },
+  "Projects": {
+    "title": "Projects",
+    "description": "Here you can find some of my personal projects, exercises, and libraries."
+  },
+  "Spotify": {
+    "title": "Recently listened to"
+  },
+  "Global": {
+    "loading": "Loading..."
+  }
+}

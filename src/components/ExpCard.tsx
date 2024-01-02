@@ -1,14 +1,14 @@
 // import moment from "moment";
-// import { useTranslation } from "react-i18next";
-// import { CountUp } from "use-count-up";
+import { useTranslations } from "next-intl";
 
 export default function ExpCard() {
-  // const [t, i18n] = useTranslation("global");
+  const t = useTranslations("Exp");
 
   const getExp = () => {
     const today = new Date();
     const start = new Date("2023-01-01");
-    const years = today.getFullYear() - start.getFullYear();
+    const difference = today - start;
+    const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
     return years;
   };
 
@@ -18,8 +18,7 @@ export default function ExpCard() {
         <div className="flex justify-center items-center flex-col">
           <p className="text-4xl md:text-8xl font-bold">+{getExp()}</p>
           <p className="text-xs md:text-xl uppercase font-semibold text-center">
-            {/* {t("exp")} */}
-            AÑOS DE EXPERIENCIA
+            {t("exp")}
           </p>
         </div>
       </div>

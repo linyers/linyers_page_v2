@@ -1,13 +1,13 @@
 // import { motion } from "framer-motion";
 import styles from "@/styles/SpotifyCard.module.css";
+import { useLocale } from "next-intl";
 
-// import { useTranslation } from "react-i18next";
 import { BsSpotify } from "react-icons/bs";
 import { fetchSpotifyPlaying } from "@/lib/data";
 import SpotifyAudio from "./SpotifyAudio";
 
 export default async function SpotifyCard() {
-  // const [t, i18n] = useTranslation("global");
+  const locale = useLocale();
   const data = await fetchSpotifyPlaying();
 
   return (
@@ -26,8 +26,7 @@ export default async function SpotifyCard() {
 
       <div className={styles.card__body}>
         <p className="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">
-          {/* {t("spotify.current")} */}
-          Escuchado recientemente
+          {locale === "es" ? "Escuchado recientemente" : "Recently listened to"}
         </p>
         <div className="flex mb-2 flex-col">
           <p className="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">
