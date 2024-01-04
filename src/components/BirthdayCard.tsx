@@ -12,7 +12,7 @@ export default function BirthdayCard() {
   };
 
   return (
-    <div className="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-[#ff4848d3] p-4 justify-center items-center">
+    <div className="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-blue-300 dark:bg-blue-900 p-4 justify-center items-center">
       <div className="">
         <div className="flex justify-center items-center flex-col">
           <p className="text-xs md:text-lg uppercase font">{t("age")}</p>

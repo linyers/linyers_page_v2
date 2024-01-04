@@ -8,7 +8,7 @@ export default function SpotifyCard() {
   const t = useTranslations("Spotify");
   const tGlobal = useTranslations("Global");
   return (
-    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-1 row-span-1 overflow-hidden bg-[#0000008f] scale-[100%]">
+    <div className="relative flex flex-col justify-between p-3 md:p-7 lg:p-8 rounded-3xl md:col-span-2 col-span-1 row-span-1 overflow-hidden bg-white dark:bg-slate-900 scale-[100%]">
       <div className="absolute invisible md:visible md:static">
         <a
           href="#"
@@ -23,24 +23,51 @@ export default function SpotifyCard() {
       </div>
 
       <div className={styles.card__body}>
-        <p className="text-[#ffffff] font-bold text-xs lg:text-2xl md:text-xl">
+        <p className="text-slate-600 dark:text-white font-bold text-xs lg:text-2xl md:text-xl">
           {t("title")}
         </p>
         <div className="flex mb-2 flex-col">
-          <p className="text-[#ffffff] w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">
+          <p className="text-slate-600 dark:text-white w-full xl:text-xl lg:text-lg text-xs font-semibold truncate">
             {tGlobal("loading")}
           </p>
         </div>
         <div id="audiovisual" className={styles.audiovisual}>
-          <div className={styles.audiowire} id="audio1"></div>
-          <div className={styles.audiowire} id="audio2"></div>
-          <div className={styles.audiowire} id="audio3"></div>
-          <div className={styles.audiowire} id="audio4"></div>
-          <div className={styles.audiowire} id="audio5"></div>
-          <div className={styles.audiowire} id="audio6"></div>
-          <div className={styles.audiowire} id="audio7"></div>
-          <div className={styles.audiowire} id="audio8"></div>
-          <div className={styles.audiowire} id="audio9"></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio1"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio2"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio3"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio4"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio5"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio6"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio7"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio8"
+          ></div>
+          <div
+            className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+            id="audio9"
+          ></div>
         </div>
       </div>
 

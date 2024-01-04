@@ -23,7 +23,7 @@ export default function ProjectsCard() {
           {t("description")}
         </p>
       </div>
-      <div className="w-full h-full bg-[#1c053a9c] dark:bg-[#af72ff56] absolute">
+      <div className="w-full h-full bg-sky-300 dark:bg-sky-600 absolute">
         <Image
           src={coding}
           className="w-full h-full object-cover opacity-40"

@@ -95,18 +95,45 @@ export default function SpotifyAudio({ data }) {
         className={styles.audiovisual}
         onClick={handleState}
       >
-        <div className=" text-white text-xl">
+        <div className="text-slate-600 dark:text-white text-xl">
           {isPlaying ? <BsFillPauseFill /> : <BsFillPlayFill />}
         </div>
-        <div className={styles.audiowire} id="audio1"></div>
-        <div className={styles.audiowire} id="audio2"></div>
-        <div className={styles.audiowire} id="audio3"></div>
-        <div className={styles.audiowire} id="audio4"></div>
-        <div className={styles.audiowire} id="audio5"></div>
-        <div className={styles.audiowire} id="audio6"></div>
-        <div className={styles.audiowire} id="audio7"></div>
-        <div className={styles.audiowire} id="audio8"></div>
-        <div className={styles.audiowire} id="audio9"></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio1"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio2"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio3"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio4"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio5"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio6"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio7"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio8"
+        ></div>
+        <div
+          className={`${styles.audiowire} bg-slate-600 dark:bg-white`}
+          id="audio9"
+        ></div>
       </div>
       <audio src={data?.preview_url} id="music" onEnded={reset}></audio>
     </>

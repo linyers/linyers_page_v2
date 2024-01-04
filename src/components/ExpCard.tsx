@@ -13,7 +13,7 @@ export default function ExpCard() {
   };
 
   return (
-    <div className="text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-blue-400/80 p-4 justify-center items-center">
+    <div className="text-slate-600 dark:text-white rounded-3xl flex relative overflow-hidden aspect-square shadow-sm bg-white dark:bg-slate-900 p-4 justify-center items-center">
       <div className="">
         <div className="flex justify-center items-center flex-col">
           <p className="text-4xl md:text-8xl font-bold">+{getExp()}</p>

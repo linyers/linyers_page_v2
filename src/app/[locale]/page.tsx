@@ -31,8 +31,8 @@ export default function Home() {
       <ExpCard />
       <GithubCard />
       <ProjectsCard />
-      <SkillsCard />
       <EmailCard />
+      <SkillsCard />
       <Suspense fallback={<DiscordCardSkeleton />}>
         <DiscordCard />
       </Suspense>
