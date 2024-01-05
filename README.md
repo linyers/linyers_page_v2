@@ -1,4 +1,3 @@
-<br />
 <p align="center">
   <h3 align="center">Welcome to my personal website!</h3>
   <p align="center">
@@ -7,6 +6,22 @@
     <a href="https://linyers.com.ar">linyers.com.art</a>
   </p>
 </p>
+
+## Features
+
+- **Responsive Design**
+
+- **Multilingual Content, English and Spanish**
+
+- **Light and Dark Mode**
+
+- **Social Media**
+
+- **Skills and Tools**
+
+- **Spotify Current Listened**
+
+- **Weather**
 
 ## Acknowledgments and Inspiration
 
