@@ -7,7 +7,7 @@ export default function ExpCard() {
   const getExp = () => {
     const today = new Date();
     const start = new Date("2023-01-01");
-    const difference = today - start;
+    const difference = today.getTime() - start.getTime();
     const years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
     return years;
   };

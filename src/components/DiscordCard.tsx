@@ -5,7 +5,7 @@ import { MdOpenInNew } from "react-icons/md";
 export default async function DiscordCard() {
   const status = await fetchDiscordStatus();
   const getBgClass = (status: string): string => {
-    const bgClass = {
+    const bgClass: { [key: string]: string } = {
       idle: "bg-[#FF5B5B] dark:bg-[#E33E3E]",
       dnd: "bg-[#FF5B5B] dark:bg-[#E33E3E]",
       online: "bg-[#6DD2B7] dark:bg-[#35AC8C]",

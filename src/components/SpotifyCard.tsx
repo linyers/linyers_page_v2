@@ -33,7 +33,9 @@ export default async function SpotifyCard() {
             {data?.name}
           </p>
           <p className="text-slate-600 dark:text-white w-full xl:text-xl lg:text-lg text-xs truncate">
-            {data?.artists.length > 1
+            {!data
+              ? "Error"
+              : data?.artists.length > 1
               ? data?.artists.map((artist) => artist.name).join(", ")
               : data?.artists[0].name}
           </p>

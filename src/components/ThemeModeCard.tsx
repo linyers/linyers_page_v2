@@ -16,7 +16,7 @@ export default function ThemeCard() {
     }
   }, [theme, resolvedTheme]);
 
-  const handleChange = (e) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const checked = e.target.checked;
     if (checked) {
       setChecked(true);
@@ -33,7 +33,7 @@ export default function ThemeCard() {
         <input
           type="checkbox"
           id="switch"
-          value={checked}
+          value={checked ? "checked" : ""}
           checked={checked}
           onChange={handleChange}
           name="theme"

@@ -6,7 +6,7 @@ export default function BirthdayCard() {
   const getAge = () => {
     const today = new Date();
     const birthDate = new Date("2003-04-06");
-    const difference = today - birthDate;
+    const difference = today.getTime() - birthDate.getTime();
     const age = Math.floor(difference / (1000 * 60 * 60 * 24 * 365.25));
     return age;
   };

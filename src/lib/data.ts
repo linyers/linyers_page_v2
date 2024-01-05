@@ -4,7 +4,7 @@ import SpotifyWebApi from "spotify-web-api-node";
 export async function fetchDiscordStatus() {
   try {
     const response = await axios.get(
-      "https://api.lanyard.rest/v1/users/948009520850931722"
+      "https://api.lanyard.rest/v1/users/948009520850931722",
     );
     const status = response.data.data.discord_status;
     return status;
@@ -21,7 +21,7 @@ const api = new SpotifyWebApi({
 
 export async function fetchSpotifyPlaying() {
   try {
-    api.setRefreshToken(process.env.SPOTIFY_REFRESH);
+    api.setRefreshToken(process.env.SPOTIFY_REFRESH as string);
     const data = await api.refreshAccessToken();
     api.setAccessToken(data.body.access_token);
 
@@ -38,14 +38,14 @@ export async function fetchSpotifyPlaying() {
 
 export async function fetchTime() {
   const time = await axios.get(
-    "https://api.sunrise-sunset.org/json?lat=-27.730586lng=-64.2700297&formatted=0"
+    "https://api.sunrise-sunset.org/json?lat=-27.730586lng=-64.2700297&formatted=0",
   );
   return time;
 }
 
 export async function fetchWeather() {
   const weather = await axios.get(
-    `https://api.openweathermap.org/data/2.5/weather?q=santiago+del+estero,argentina&appid=${process.env.WEATHER_KEY}&units=metric`
+    `https://api.openweathermap.org/data/2.5/weather?q=santiago+del+estero,argentina&appid=${process.env.WEATHER_KEY}&units=metric`,
   );
   return weather;
 }

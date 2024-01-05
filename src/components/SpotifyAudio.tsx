@@ -4,35 +4,61 @@ import React, { useEffect } from "react";
 import { BsFillPauseFill, BsFillPlayFill } from "react-icons/bs";
 import styles from "@/styles/SpotifyCard.module.css";
 
-export default function SpotifyAudio({ data }) {
+export default function SpotifyAudio({ data }: { data: any }) {
   const [isPlaying, setIsPlaying] = React.useState(false);
 
   const handlePlay = () => {
     setIsPlaying(true);
-    document.getElementById("music").play();
-    document.getElementById("audio1").style.animationPlayState = "running";
-    document.getElementById("audio2").style.animationPlayState = "running";
-    document.getElementById("audio3").style.animationPlayState = "running";
-    document.getElementById("audio4").style.animationPlayState = "running";
-    document.getElementById("audio5").style.animationPlayState = "running";
-    document.getElementById("audio6").style.animationPlayState = "running";
-    document.getElementById("audio7").style.animationPlayState = "running";
-    document.getElementById("audio8").style.animationPlayState = "running";
-    document.getElementById("audio9").style.animationPlayState = "running";
+
+    const playAudio = (id: string) => {
+      const audioElement = document.getElementById(id) as HTMLAudioElement;
+      if (!audioElement) {
+        return;
+      }
+      if (id === "music") {
+        audioElement.play();
+        return;
+      }
+      audioElement.style.animationPlayState = "running";
+    };
+
+    playAudio("music");
+    playAudio("audio1");
+    playAudio("audio2");
+    playAudio("audio3");
+    playAudio("audio4");
+    playAudio("audio5");
+    playAudio("audio6");
+    playAudio("audio7");
+    playAudio("audio8");
+    playAudio("audio9");
   };
 
   const handlePause = () => {
     setIsPlaying(false);
-    document.getElementById("music").pause();
-    document.getElementById("audio1").style.animationPlayState = "paused";
-    document.getElementById("audio2").style.animationPlayState = "paused";
-    document.getElementById("audio3").style.animationPlayState = "paused";
-    document.getElementById("audio4").style.animationPlayState = "paused";
-    document.getElementById("audio5").style.animationPlayState = "paused";
-    document.getElementById("audio6").style.animationPlayState = "paused";
-    document.getElementById("audio7").style.animationPlayState = "paused";
-    document.getElementById("audio8").style.animationPlayState = "paused";
-    document.getElementById("audio9").style.animationPlayState = "paused";
+
+    const pauseAudio = (id: string) => {
+      const audioElement = document.getElementById(id) as HTMLAudioElement;
+      if (!audioElement) {
+        return;
+      }
+      if (id === "music") {
+        audioElement.pause();
+        return;
+      }
+      audioElement.style.animationPlayState = "paused";
+    };
+
+    pauseAudio("music");
+    pauseAudio("audio1");
+    pauseAudio("audio2");
+    pauseAudio("audio3");
+    pauseAudio("audio4");
+    pauseAudio("audio5");
+    pauseAudio("audio6");
+    pauseAudio("audio7");
+    pauseAudio("audio8");
+    pauseAudio("audio9");
   };
 
   const handleState = () => {
@@ -41,33 +67,24 @@ export default function SpotifyAudio({ data }) {
 
   const reset = () => {
     setIsPlaying(false);
-    document.getElementById("audio1").style.animation = "none";
-    document.getElementById("audio2").style.animation = "none";
-    document.getElementById("audio3").style.animation = "none";
-    document.getElementById("audio4").style.animation = "none";
-    document.getElementById("audio5").style.animation = "none";
-    document.getElementById("audio6").style.animation = "none";
-    document.getElementById("audio7").style.animation = "none";
-    document.getElementById("audio8").style.animation = "none";
-    document.getElementById("audio9").style.animation = "none";
-    document.getElementById("audio1").offsetHeight;
-    document.getElementById("audio2").offsetHeight;
-    document.getElementById("audio3").offsetHeight;
-    document.getElementById("audio4").offsetHeight;
-    document.getElementById("audio5").offsetHeight;
-    document.getElementById("audio6").offsetHeight;
-    document.getElementById("audio7").offsetHeight;
-    document.getElementById("audio8").offsetHeight;
-    document.getElementById("audio9").offsetHeight;
-    document.getElementById("audio1").style.animation = null;
-    document.getElementById("audio2").style.animation = null;
-    document.getElementById("audio3").style.animation = null;
-    document.getElementById("audio4").style.animation = null;
-    document.getElementById("audio5").style.animation = null;
-    document.getElementById("audio6").style.animation = null;
-    document.getElementById("audio7").style.animation = null;
-    document.getElementById("audio8").style.animation = null;
-    document.getElementById("audio9").style.animation = null;
+
+    const resetAudio = (id: string) => {
+      const audioElement = document.getElementById(id) as HTMLAudioElement;
+      if (!audioElement) {
+        return;
+      }
+      audioElement.style.animationPlayState = "none";
+    };
+
+    resetAudio("audio1");
+    resetAudio("audio2");
+    resetAudio("audio3");
+    resetAudio("audio4");
+    resetAudio("audio5");
+    resetAudio("audio6");
+    resetAudio("audio7");
+    resetAudio("audio8");
+    resetAudio("audio9");
   };
 
   useEffect(() => {
@@ -86,8 +103,15 @@ export default function SpotifyAudio({ data }) {
   }, [data]);
 
   useEffect(() => {
-    document.getElementById("music").volume = 0.5;
+    const musicElement = document.getElementById(
+      "music",
+    ) as HTMLAudioElement | null;
+
+    if (musicElement) {
+      musicElement.volume = 0.5;
+    }
   }, []);
+
   return (
     <>
       <div
