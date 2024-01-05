@@ -25,7 +25,7 @@ export default async function DiscordCard() {
     >
       <div className="absolute inset-0 flex items-center justify-center text-md md:text-2xl xl:text-3xl font-bold">
         <div className="flex items-center gap-3">
-          <MdOpenInNew className="absolute right-4 bottom-4 top-auto md:right-8 md:top-8 text-xl text-white dark:text-[#ffffffaa]" />
+          <MdOpenInNew className="absolute right-4 bottom-4 top-auto md:right-8 md:top-8 text-md md:text-xl text-white dark:text-[#ffffffaa]" />
           <p className="flex gap-1 md:gap-2 justify-center items-center capitalize">
             <BsDiscord /> {status}
           </p>

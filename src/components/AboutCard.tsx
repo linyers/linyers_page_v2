@@ -18,12 +18,12 @@ export default function AboutCard() {
         priority
       />
       <div className="h-full w-9/12 md:w-8/12 absolute top-0 left-0 p-6 md:p-8 flex flex-col justify-start">
-        <h1 className="text-4xl md:text-xl lg:text-5xl font-bold mb-5 text-slate-600 dark:text-white">
+        <h1 className="text-xl md:text-2xl lg:text-5xl font-bold mb-2 md:mb-5 text-slate-600 dark:text-white">
           {t("title")}
         </h1>
         <p
           dangerouslySetInnerHTML={{ __html: t.raw("description") }}
-          className="text-2xl md:text-lg lg:text-2xl text-slate-600 dark:text-white"
+          className="text-xs md:text-lg lg:text-2xl text-slate-600 dark:text-white"
         />
       </div>
     </div>

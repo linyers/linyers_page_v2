@@ -19,5 +19,5 @@ export default function TimeInterval() {
     return () => clearInterval(interval);
   }, []);
 
-  return <p className="text-md lg:text-xl">{time}</p>;
+  return <p className="text-xs lg:text-xl">{time}</p>;
 }

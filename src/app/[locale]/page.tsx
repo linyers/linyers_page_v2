@@ -20,7 +20,7 @@ import { Suspense } from "react";
 
 export default function Home() {
   return (
-    <main className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto xl:px-20">
+    <main className="grid grid-cols-3 gap-2 md:grid-cols-4 md:gap-4 my-5 container mx-auto px-4 xl:px-20">
       <AboutCard />
       <div className="grid col-span-2 md:col-span-1 gap-2 grid-cols-2 md:gap-4">
         <LanguageCard />

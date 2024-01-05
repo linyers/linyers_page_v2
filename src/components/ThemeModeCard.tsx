@@ -29,7 +29,7 @@ export default function ThemeCard() {
 
   return (
     <div className="flex justify-center items-center bg-white dark:bg-slate-900 rounded-3xl relative overflow-hidden col-span-1 aspect-square shadow-sm">
-      <label className={`${styles.vm__checkbox} md:scale-75`}>
+      <label className={`${styles.vm__checkbox} scale-75`}>
         <input
           type="checkbox"
           id="switch"

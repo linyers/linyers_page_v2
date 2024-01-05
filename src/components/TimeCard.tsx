@@ -1,8 +1,6 @@
 "use server";
 
 import { isAfter, add, getTime } from "date-fns";
-// import { DayComponent, NightComponent } from ".";
-
 import { fetchTime, fetchWeather } from "@/lib/data";
 import NightComponent from "./NightComponent";
 import DayComponent from "./DayComponent";
@@ -20,18 +18,17 @@ export default async function TimeCard() {
   const getTimeComponent = () => {
     if (!sunriseTime || !sunsetTime) return null;
     if (isAfter(new Date(), add(sunsetTime, { hours: 1 }))) {
-      return "night";
+      return <NightComponent weather={weather} />;
     }
     if (isAfter(new Date(), sunriseTime)) {
-      return "day";
+      return <DayComponent weather={weather} />;
     }
-    return "night";
+    return <NightComponent weather={weather} />;
   };
 
   return (
     <div className={`rounded-3xl flex relative overflow-hidden aspect-square`}>
-      {/* {timeComponent} */}
-      <DayComponent weather={weather} />
+      {getTimeComponent()}
     </div>
   );
 }
