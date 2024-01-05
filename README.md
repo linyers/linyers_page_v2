@@ -3,7 +3,7 @@
   <p align="center">
     Feel free to explore and learn more about me!
     <br />
-    <a href="https://linyers.com.ar">linyers.com.art</a>
+    <a href="https://linyers.com.ar">linyers.com.ar</a>
   </p>
 </p>
 
