@@ -1,53 +1,111 @@
-.vm__checkbox {
-  display: inline-block;
-  height: 3rem;
-  width: 6rem;
+.switch {
+  font-size: 17px;
   position: relative;
+  display: inline-block;
+  width: 64px;
+  height: 34px;
 }
 
-.vm__checkbox input[type="checkbox"] {
-  height: 0;
-  width: 0;
+.switch input {
   opacity: 0;
-}
-
-.vm__checkbox input[type="checkbox"]:checked {
-  + .slider {
-    background: rgb(229 231 235);
-  }
-  + .slider:before {
-    background-color: #fff;
-    translate: 3rem;
-  }
+  width: 0;
+  height: 0;
 }
 
 .slider {
   position: absolute;
+  cursor: pointer;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 0;
   background-color: rgb(30 41 59);
-  border-radius: 2rem;
-  cursor: pointer;
-  transition: background-color 0.22s ease;
+  transition: 0.4s;
+  border-radius: 30px;
 }
 
 .slider:before {
-  content: "\f185";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 600;
-  color: #e67e22;
-  height: 2.5rem;
-  width: 2.5rem;
-  display: flex;
-  font-size: 1.5rem;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  background-color: rgb(15 23 42);
   position: absolute;
-  top: 0.25rem;
-  left: 0.25rem;
-  transition: all 0.4s;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  left: 2px;
+  bottom: 2px;
+  z-index: 2;
+  background-color: rgb(15 23 42);
+  transition: 0.4s;
+}
+
+.input:checked + .slider:before {
+  background-color: #fff;
+}
+
+.sun svg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.moon svg {
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 35px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+}
+
+/* .switch:hover */
+.sun svg {
+  animation: rotate 15s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* .switch:hover */
+.moon svg {
+  animation: tilt 5s linear infinite;
+}
+
+@keyframes tilt {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  25% {
+    transform: rotate(-10deg);
+  }
+
+  75% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.input:checked + .slider {
+  background-color: #73c0fc;
+}
+
+.input:focus + .slider {
+  box-shadow: 0 0 1px #183153;
+}
+
+.input:checked + .slider:before {
+  transform: translateX(30px);
 }
