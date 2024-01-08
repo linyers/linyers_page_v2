@@ -1,16 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import { useLocale } from "next-intl";
 
 import coding from "@/assets/images/coding.gif";
 import { BsArrowRightShort } from "react-icons/bs";
 
 export default function ProjectsCard() {
   const t = useTranslations("Projects");
+  const locale = useLocale();
 
   return (
     <Link
-      href="/projects"
+      href={`${locale}/projects`}
       scroll={false}
       className="relative rounded-3xl col-span-1 md:col-span-2 md:aspect-auto overflow-hidden hover:scale-[103%] transition duration-500 ease-in-out"
     >
