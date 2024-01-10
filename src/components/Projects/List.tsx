@@ -15,14 +15,14 @@ export default function List() {
     <>
       <ul className="grid grid-cols-1 gap-2 md:grid-cols-3 md:gap-4">
         {projects.map((project, idx) => {
-          return <ProjectCard project={project} idx={idx} />;
+          return <ProjectCard key={idx} project={project} />;
         })}
       </ul>
     </>
   );
 }
 
-function ProjectCard({ project, idx }: { project: Project; idx: number }) {
+function ProjectCard({ project }: { project: Project }) {
   const [isHover, setIsHover] = useState(false);
   const [showModal, setShowModal] = useState(false);
 
@@ -119,7 +119,6 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
       ) : (
         <li
           className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 border-slate-700"
-          key={idx}
           onClick={() => handleShowModal()}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
