@@ -6,6 +6,9 @@ import { useLocale } from "next-intl";
 import Image from "next/image";
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import { BsGithub } from "react-icons/bs";
+import { TbWorld } from "react-icons/tb";
+import { FaXmark } from "react-icons/fa6";
 
 export default function List() {
   return (
@@ -64,12 +67,16 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
       ></div>
       {showModal ? (
         <li>
-          <div className="fixed z-10 w-[90%] md:w-[60%] h-[90%] md:h-[60%] top-[5%] md:top-[20%] left-[5%] md:left-[20%] bg-white dark:bg-slate-900 rounded-3xl p-5">
-            <div className="w-full h-full p-5 rounded-3xl dark:bg-slate-950 overflow-auto">
-              <h2 className="font-bold text-3xl md:text-4xl">
-                {projectLang.title}
-              </h2>
-              <p className="pt-2 text-lg md:text-xl h-1/2 md:h-auto overflow-y-auto">
+          <div className="fixed z-10 w-[90%] md:w-[60%] h-[90%] md:h-[60%] top-[5%] md:top-[20%] left-[5%] md:left-[20%] bg-[#f7f1f1] dark:bg-slate-900 rounded-3xl p-3 md:p-5">
+            <div className="w-full h-full p-3 md:p-5 rounded-3xl bg-white dark:bg-slate-950 overflow-auto text-slate-600 dark:text-white">
+              <div
+                className="absolute right-5 top-6 md:right-8 md:top-10 cursor-pointer"
+                onClick={() => handleCloseModal()}
+              >
+                <FaXmark className="text-3xl" />
+              </div>
+              <h2 className="font-bold text-4xl">{projectLang.title}</h2>
+              <p className="pt-2 text-xl h-1/2 md:h-auto overflow-y-auto">
                 {projectLang.description}
               </p>
               <div className="py-5 flex flex-wrap gap-2 overflow-auto">
@@ -84,28 +91,34 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
                   );
                 })}
               </div>
-              {project.website ? (
-                <div>
-                  <span>Website</span>
-                  <a href={project.website}>{project.website}</a>
+              {project.website && (
+                <div className="pb-6 flex flex-col">
+                  <span className="flex items-baseline gap-2 font-bold text-lg">
+                    <TbWorld />
+                    Website
+                  </span>
+                  <a className="w-fit underline" href={project.website}>
+                    {project.website}
+                  </a>
                 </div>
-              ) : (
-                ""
               )}
-              {project.github ? (
-                <div>
-                  <span>Github</span>
-                  <a href={project.github}>{project.github}</a>
+              {project.github && (
+                <div className="flex flex-col">
+                  <span className="flex items-baseline gap-2 font-bold text-lg">
+                    <BsGithub />
+                    Github
+                  </span>
+                  <a className="w-fit underline" href={project.github}>
+                    {project.github}
+                  </a>
                 </div>
-              ) : (
-                ""
               )}
             </div>
           </div>
         </li>
       ) : (
         <li
-          className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white"
+          className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 border-slate-700"
           key={idx}
           onClick={() => handleShowModal()}
           onMouseEnter={() => setIsHover(true)}
@@ -142,6 +155,7 @@ function ProjectCard({ project, idx }: { project: Project; idx: number }) {
               draggable={false}
               width={1280}
               height={720}
+              placeholder="blur"
             />
           </div>
         </li>

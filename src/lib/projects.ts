@@ -1,54 +1,62 @@
 import { Project } from "./definitions";
-import linyersPageV2 from "@/assets/projects/linyers_page_v2.png";
+import linyersPageV2 from "@/assets/projects/linyers_page_v2.jpeg";
+import linyersPageV1 from "@/assets/projects/linyers_page_v1.jpeg";
+import lomitosAPI from "@/assets/projects/lomitos_api.jpeg";
+import ecommerce from "@/assets/projects/ecommerce.jpeg";
 
 export const projects: Project[] = [
   {
     id: 1,
     url: "lomitos-api",
-    images: [linyersPageV2],
-    tags: ["Django", "DjangoRest", "ReactJS", "Docker", "Python"],
+    images: [lomitosAPI],
+    tags: ["Django", "DjangoRest", "ReactJS", "Docker", "Nginx"],
     github: "https://github.com/linyers/LomitosAPI",
-    website: "",
+    website: "https://lomitos-api.vercel.app",
     es: {
       title: "Lomitos API",
       description:
-        "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
+        "Este proyecto es una API REST que contiene información sobre algunos lugares de comida rápida, principalmente lomiterías, de mi ciudad, Santiago del Estero, Argentina. Para obtener los datos, se utilizó una biblioteca de web scraping llamada Selenium en la página de Google Maps. La API cuenta con autenticación de usuarios, paginación, filtros, todas las operaciones CRUD y otras funcionalidades. Para el desarrollo de la API se empleó Django Rest Framework, PostgreSQL y para el despliegue se utilizaron Docker, un servidor Nginx y además Gunicorn. La API fue desplegada en AWS. También existe documentación sobre la API escrita en ReactJS, la cual está disponible. Cabe destacar que actualmente la API no está disponible en la nube.",
     },
     en: {
       title: "Lomitos API",
-      description: "lorem",
+      description:
+        "This project is a REST API that contains information about some fast-food places, mainly snack bars, in my city, Santiago del Estero, Argentina. To obtain the data, a web scraping library called Selenium was used on the Google Maps page. The API features user authentication, pagination, filters, all CRUD operations, and other functionalities. For the development of the API, Django Rest Framework, PostgreSQL, Docker, an Nginx server, and Gunicorn were used for deployment. The API was deployed on AWS. There is also documentation about the API written in ReactJS, which is available. It's worth noting that the API is currently not available in the cloud.",
     },
   },
   {
     id: 2,
     url: "ecommerce",
-    images: [linyersPageV2],
+    images: [ecommerce],
     tags: ["Django", "DjangoRest", "ReactJS"],
     github: "https://github.com/linyers/Ecommerce-django",
     website: "",
     es: {
       title: "Ecommerce",
-      description: "lorem",
+      description:
+        "Esta aplicación vendría a ser una suerte de MercadoLibre, donde existe autenticación de usuarios, direcciones de los usuarios, productos, búsqueda de productos, filtros, comentarios, reseñas, reembolsos y carrito de compras. Además, cada usuario puede publicar sus productos y comprar los productos de otros usuarios. La aplicación también cuenta con una pasarela de pago de prueba. Para el frontend se utilizó ReactJS y para el backend Django Rest Framework.",
     },
     en: {
       title: "Ecommerce",
-      description: "lorem",
+      description:
+        "This application would be a sort of MercadoLibre, where there is user authentication, user addresses, products, product search, filters, comments, reviews, refunds, and a shopping cart. In addition, each user can post their products and buy products from other users. The application also includes a test payment gateway. ReactJS was used for the frontend, and Django Rest Framework for the backend.",
     },
   },
   {
     id: 3,
     url: "linyers-page-v1",
-    images: [linyersPageV2],
-    tags: ["Django", "DjangoRest", "ReactJS", "Docker"],
+    images: [linyersPageV1],
+    tags: ["Django", "DjangoRest", "ReactJS", "Docker", "Nginx"],
     github: "https://github.com/linyers/LinyersPage",
-    website: "",
+    website: "https://linyers-page.vercel.app",
     es: {
       title: "Mi primer sitio web personal",
-      description: "lorem",
+      description:
+        "Este sitio web contiene una breve presentación sobre mí, un apartado de mis proyectos y un blog. El blog contenía un filtro por categorías y paginación. Para obtener los proyectos, se utilizaba la API de Github para obtener los datos de mis repositorios y luego guardarlos en una base de datos PostgreSQL. Para el frontend se usó ReactJS y para el backend Django Rest Framework. El backend se desplegó en AWS, se utilizó Docker y Nginx. Actualmente, el blog y el apartado de proyectos no están disponibles.",
     },
     en: {
-      title: "",
-      description: "lorem",
+      title: "My first personal website",
+      description:
+        "This website contains a brief presentation about me, a section for my projects, and a blog. The blog had a category filter and pagination. To obtain the projects, the Github API was used to fetch data from my repositories and then store it in a PostgreSQL database. ReactJS was used for the frontend, and Django Rest Framework for the backend. The backend was deployed on AWS, using Docker and Nginx. Currently, the blog and the projects section are not available.",
     },
   },
   {
@@ -57,14 +65,16 @@ export const projects: Project[] = [
     images: [linyersPageV2],
     tags: ["NextJS", "TypeScript"],
     github: "https://github.com/linyers/linyers_page_v2",
-    website: "",
+    website: "https://linyers.com.ar",
     es: {
       title: "Mi actual sitio web personal",
-      description: "lorem",
+      description:
+        "Este es el sitio web en el que ahora mismo estás navegando. Tiene ciertas características como el modo oscuro y claro, soporta el inglés y español, se puede tener la última canción que escuché en Spotify, mi estado actual en Discord, el tiempo y clima de donde vivo, mis redes sociales y un apartado para mis proyectos. Para el desarrollo de este sitio web se usó NextJS 14 con TypeScript.",
     },
     en: {
-      title: "",
-      description: "lorem",
+      title: "My current personal website",
+      description:
+        "This is the website you are currently browsing. It has certain features such as dark and light mode, supports English and Spanish, displays the last song I listened to on Spotify, my current status on Discord, the weather of my location, my social media links, and a section for my projects. NextJS 14 with TypeScript was used for the development of this website.",
     },
   },
 ];

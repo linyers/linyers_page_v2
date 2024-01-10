@@ -38,7 +38,7 @@ export async function fetchSpotifyPlaying() {
 
 export async function fetchTime() {
   const time = await axios.get(
-    "https://api.sunrise-sunset.org/json?lat=-27.730586lng=-64.2700297&formatted=0",
+    "https://api.sunrise-sunset.org/json?lat=-27.730586&lng=-64.2700297&formatted=0",
   );
   return time;
 }
