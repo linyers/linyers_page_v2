@@ -118,7 +118,7 @@ function ProjectCard({ project }: { project: Project }) {
         </li>
       ) : (
         <li
-          className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 border-slate-700"
+          className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 dark:border-slate-700"
           onClick={() => handleShowModal()}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
