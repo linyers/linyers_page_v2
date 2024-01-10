@@ -3,6 +3,7 @@ import linyersPageV2 from "@/assets/projects/linyers_page_v2.jpeg";
 import linyersPageV1 from "@/assets/projects/linyers_page_v1.jpeg";
 import lomitosAPI from "@/assets/projects/lomitos_api.jpeg";
 import ecommerce from "@/assets/projects/ecommerce.jpeg";
+import quiz from "@/assets/projects/quiz.png";
 
 export const projects: Project[] = [
   {
@@ -25,9 +26,27 @@ export const projects: Project[] = [
   },
   {
     id: 2,
+    url: "quiz",
+    images: [quiz],
+    tags: ["DjangoRest", "ReactJS", "TailwindCSS", "Zustand"],
+    github: "https://github.com/linyers/quiz-django-react",
+    website: "",
+    es: {
+      title: "Quiz",
+      description:
+        "Esta aplicación fue hecha para un cliente y sigue en mantenimiento. Se trata de una app de gestión de exámenes de secundaria, cada examen tiene información sobre el año, curso, asignatura, cuando empieza y finaliza el examen, además de sus respectivas preguntas y las respuestas de dichas preguntas. El profesor podrá crear, modificar y eliminar los exámenes, así como también las cuentas de los alumnos. Los alumnos podrán realizar los exámenes de forma intuitiva, ver cuánto tiempo les queda, y el resultado al finalizar el examen. Fue hecha con Django y DjangoRest para el backend y ReactJS para el frontend. Además, para la gestión del estado se usó la librería Zustand y para la autenticación de usuarios se usó JWT.",
+    },
+    en: {
+      title: "Quiz",
+      description:
+        "This application was made for a client and is still under maintenance. It is a high school exam management app; each exam has information about the year, grade, subject, start and end time, as well as its respective questions and answers. The teacher can create, modify, and delete exams, as well as student accounts. Students can take exams intuitively, see how much time is left, and view the results upon finishing the exam. It was built with Django and DjangoRest for the backend, and ReactJS for the frontend. Additionally, Zustand was used for state management, and JWT for user authentication.",
+    },
+  },
+  {
+    id: 3,
     url: "ecommerce",
     images: [ecommerce],
-    tags: ["Django", "DjangoRest", "ReactJS"],
+    tags: ["Django", "DjangoRest", "ReactJS", "TailwindCSS"],
     github: "https://github.com/linyers/Ecommerce-django",
     website: "",
     es: {
@@ -42,10 +61,10 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 3,
+    id: 4,
     url: "linyers-page-v1",
     images: [linyersPageV1],
-    tags: ["Django", "DjangoRest", "ReactJS", "Docker", "Nginx"],
+    tags: ["DjangoRest", "ReactJS", "Docker", "Nginx"],
     github: "https://github.com/linyers/LinyersPage",
     website: "https://linyers-page.vercel.app",
     es: {
@@ -60,10 +79,10 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
     url: "linyers-page-v2",
     images: [linyersPageV2],
-    tags: ["NextJS", "TypeScript"],
+    tags: ["NextJS", "TypeScript", "TailwindCSS"],
     github: "https://github.com/linyers/linyers_page_v2",
     website: "https://linyers.com.ar",
     es: {
