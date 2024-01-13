@@ -5,7 +5,7 @@ import { FaLinkedinIn } from "react-icons/fa";
 export default function LinkedinCard() {
   return (
     <a
-      href="https://www.linkedin.com/in/ariel-ignacio-jimenez-2b1aa8275/"
+      href="https://www.linkedin.com/in/ariel-ignacio-jimenez/"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Linkedin"
