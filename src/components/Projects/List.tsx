@@ -118,7 +118,7 @@ function ProjectCard({ project }: { project: Project }) {
         </li>
       ) : (
         <li
-          className="flex flex-col cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 dark:border-slate-700"
+          className="grid grid-cols-1 cursor-pointer bg-white dark:bg-slate-900 rounded-3xl pt-6 w-full text-slate-600 dark:text-white border-2 dark:border-slate-700"
           onClick={() => handleShowModal()}
           onMouseEnter={() => setIsHover(true)}
           onMouseLeave={() => setIsHover(false)}
@@ -129,7 +129,7 @@ function ProjectCard({ project }: { project: Project }) {
           <p className="px-5 pt-2 text-lg md:text-base truncate">
             {projectLang.description}
           </p>
-          <div className="px-5 py-5 flex flex-wrap gap-2 text-sm">
+          <div className="md:w-3/4 px-5 py-5 flex flex-wrap gap-2 text-sm">
             {project.tags.map((tag, idx) => {
               return (
                 <span
@@ -143,9 +143,7 @@ function ProjectCard({ project }: { project: Project }) {
           </div>
           <div
             className={`
-                overflow-hidden transition-all duration-200 rounded-3xl ${
-                  isHover && "rounded-t-xl"
-                }`}
+                overflow-hidden transition-all duration-200 rounded-b-3xl`}
           >
             <Image
               src={project.images[0]}

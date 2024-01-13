@@ -4,13 +4,57 @@ import linyersPageV1 from "@/assets/projects/linyers_page_v1.jpeg";
 import lomitosAPI from "@/assets/projects/lomitos_api.jpeg";
 import ecommerce from "@/assets/projects/ecommerce.jpeg";
 import quiz from "@/assets/projects/quiz.png";
+import pdfGenerator from "@/assets/projects/pdf_generator.png";
 
 export const projects: Project[] = [
   {
     id: 1,
+    url: "pdf-generator",
+    images: [pdfGenerator],
+    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
+    github: "",
+    website: "",
+    es: {
+      title: "Generador de PDF",
+      description:
+        "Esta aplicación genera PDFs a partir de CSVs con información de analíticas de Google Ads. Lo que hacía era enviar varios CSVs desde una aplicación de React a una API desarrollada en Django, y la API se encargaba de generar un PDF que era un resumen a través de la información de los CSVs. El resumen era creado mediante inteligencia artificial, y después de ser procesado se guardaba en una base de datos y se enviaba de vuelta a la aplicación de React. Allí, el usuario podía visualizar y/o descargar su resumen generado por IA. Me encargué del desarrollo de la aplicación de React, que es la que ve el usuario, y también de la API y sus respectivas conexiones. No desarrollé el modo en que se realiza la generación del PDF mediante IA, aunque estuve revisando y resolviendo algunos problemas que había en ello. Además, me encargué del despliegue de la API en AWS usando Docker y Nginx.",
+    },
+    en: {
+      title: "PDF Generator",
+      description:
+        "This application generates PDFs from CSVs containing Google Ads analytics information. What it did was send several CSVs from a React application to an API developed in Django, and the API was responsible for generating a PDF that summarized the information from the CSVs. The summary was created through artificial intelligence, and after being processed, it was saved in a database and sent back to the React application. There, the user could view and/or download their AI-generated summary. I was responsible for the development of the React application, which is what the user sees, and also the API and its respective connections. I did not develop the way the PDF generation through AI is done, although I was reviewing and solving some problems in that process. Additionally, I handled the deployment of the API on AWS using Docker and Nginx.",
+    },
+  },
+  {
+    id: 2,
+    url: "exams-app",
+    images: [quiz],
+    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS", "Zustand"],
+    github: "https://github.com/linyers/quiz-django-react",
+    website: "",
+    es: {
+      title: "App de examenes",
+      description:
+        "Esta aplicación fue hecha para un cliente y sigue en mantenimiento. Se trata de una app de gestión de exámenes de secundaria, cada examen tiene información sobre el año, curso, asignatura, cuando empieza y finaliza el examen, además de sus respectivas preguntas y las respuestas de dichas preguntas. El profesor podrá crear, modificar y eliminar los exámenes, así como también las cuentas de los alumnos. Los alumnos podrán realizar los exámenes de forma intuitiva, ver cuánto tiempo les queda, y el resultado al finalizar el examen. Fue hecha con Django y DjangoRest para el backend y ReactJS para el frontend. Además, para la gestión del estado se usó la librería Zustand y para la autenticación de usuarios se usó JWT.",
+    },
+    en: {
+      title: "Exams App",
+      description:
+        "This application was made for a client and is still under maintenance. It is a high school exam management app; each exam has information about the year, grade, subject, start and end time, as well as its respective questions and answers. The teacher can create, modify, and delete exams, as well as student accounts. Students can take exams intuitively, see how much time is left, and view the results upon finishing the exam. It was built with Django and DjangoRest for the backend, and ReactJS for the frontend. Additionally, Zustand was used for state management, and JWT for user authentication.",
+    },
+  },
+  {
+    id: 3,
     url: "lomitos-api",
     images: [lomitosAPI],
-    tags: ["Django", "DjangoRest", "ReactJS", "Docker", "Nginx"],
+    tags: [
+      "DjangoRest",
+      "PostgreSQL",
+      "ReactJS",
+      "TailwindCSS",
+      "Docker",
+      "Nginx",
+    ],
     github: "https://github.com/linyers/LomitosAPI",
     website: "https://lomitos-api.vercel.app",
     es: {
@@ -25,28 +69,10 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 2,
-    url: "quiz",
-    images: [quiz],
-    tags: ["DjangoRest", "ReactJS", "TailwindCSS", "Zustand"],
-    github: "https://github.com/linyers/quiz-django-react",
-    website: "",
-    es: {
-      title: "Quiz",
-      description:
-        "Esta aplicación fue hecha para un cliente y sigue en mantenimiento. Se trata de una app de gestión de exámenes de secundaria, cada examen tiene información sobre el año, curso, asignatura, cuando empieza y finaliza el examen, además de sus respectivas preguntas y las respuestas de dichas preguntas. El profesor podrá crear, modificar y eliminar los exámenes, así como también las cuentas de los alumnos. Los alumnos podrán realizar los exámenes de forma intuitiva, ver cuánto tiempo les queda, y el resultado al finalizar el examen. Fue hecha con Django y DjangoRest para el backend y ReactJS para el frontend. Además, para la gestión del estado se usó la librería Zustand y para la autenticación de usuarios se usó JWT.",
-    },
-    en: {
-      title: "Quiz",
-      description:
-        "This application was made for a client and is still under maintenance. It is a high school exam management app; each exam has information about the year, grade, subject, start and end time, as well as its respective questions and answers. The teacher can create, modify, and delete exams, as well as student accounts. Students can take exams intuitively, see how much time is left, and view the results upon finishing the exam. It was built with Django and DjangoRest for the backend, and ReactJS for the frontend. Additionally, Zustand was used for state management, and JWT for user authentication.",
-    },
-  },
-  {
-    id: 3,
+    id: 4,
     url: "ecommerce",
     images: [ecommerce],
-    tags: ["Django", "DjangoRest", "ReactJS", "TailwindCSS"],
+    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS"],
     github: "https://github.com/linyers/Ecommerce-django",
     website: "",
     es: {
@@ -61,10 +87,10 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
     url: "linyers-page-v1",
     images: [linyersPageV1],
-    tags: ["DjangoRest", "ReactJS", "Docker", "Nginx"],
+    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
     github: "https://github.com/linyers/LinyersPage",
     website: "https://linyers-page.vercel.app",
     es: {
@@ -76,24 +102,6 @@ export const projects: Project[] = [
       title: "My first personal website",
       description:
         "This website contains a brief presentation about me, a section for my projects, and a blog. The blog had a category filter and pagination. To obtain the projects, the Github API was used to fetch data from my repositories and then store it in a PostgreSQL database. ReactJS was used for the frontend, and Django Rest Framework for the backend. The backend was deployed on AWS, using Docker and Nginx. Currently, the blog and the projects section are not available.",
-    },
-  },
-  {
-    id: 5,
-    url: "linyers-page-v2",
-    images: [linyersPageV2],
-    tags: ["NextJS", "TypeScript", "TailwindCSS"],
-    github: "https://github.com/linyers/linyers_page_v2",
-    website: "https://linyers.com.ar",
-    es: {
-      title: "Mi actual sitio web personal",
-      description:
-        "Este es el sitio web en el que ahora mismo estás navegando. Tiene ciertas características como el modo oscuro y claro, soporta el inglés y español, se puede tener la última canción que escuché en Spotify, mi estado actual en Discord, el tiempo y clima de donde vivo, mis redes sociales y un apartado para mis proyectos. Para el desarrollo de este sitio web se usó NextJS 14 con TypeScript.",
-    },
-    en: {
-      title: "My current personal website",
-      description:
-        "This is the website you are currently browsing. It has certain features such as dark and light mode, supports English and Spanish, displays the last song I listened to on Spotify, my current status on Discord, the weather of my location, my social media links, and a section for my projects. NextJS 14 with TypeScript was used for the development of this website.",
     },
   },
 ];
