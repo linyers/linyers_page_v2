@@ -1,10 +1,10 @@
 import { Project } from "./definitions";
-import linyersPageV2 from "@/assets/projects/linyers_page_v2.jpeg";
 import linyersPageV1 from "@/assets/projects/linyers_page_v1.jpeg";
 import lomitosAPI from "@/assets/projects/lomitos_api.jpeg";
 import ecommerce from "@/assets/projects/ecommerce.jpeg";
 import quiz from "@/assets/projects/quiz.png";
 import pdfGenerator from "@/assets/projects/pdf_generator.png";
+import pomoMon from "@/assets/projects/pomomon.png";
 
 export const projects: Project[] = [
   {
@@ -70,6 +70,25 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    url: "pomomon",
+    images: [pomoMon],
+    tags: ["React", "Typescript", "Zustand", "TailwindCSS"],
+    github: "https://github.com/linyers/pomomon",
+    website: "https://pomomon.vercel.app",
+    es: {
+      title: "PomoMon",
+      description:
+        "PomoMon es una herramienta diseñada para mejorar la productividad y la gestión del tiempo mediante la técnica de Pomodoro. Se pueden configurar el tiempo de los pomodoros (tiempo de trabajo), los descansos y los descansos largos. También se puede elegir una alarma y su volumen para cuando termine la sesión. Esta aplicación se creó con React y TypeScript, además de bibliotecas como Zustand y TailwindCSS.",
+    },
+    en: {
+      title: "PomoMon",
+      description:
+        "PomoMon is a tool designed to improve productivity and time management through the Pomodoro technique. You can configure the time for the pomodoros (work time), breaks, and long breaks. You can also choose an alarm and its volume for when the session ends. This application was created with React and TypeScript, as well as libraries such as Zustand and TailwindCSS.",
+    },
+  },
+
+  {
+    id: 5,
     url: "ecommerce",
     images: [ecommerce],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS"],
@@ -87,7 +106,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 5,
+    id: 6,
     url: "linyers-page-v1",
     images: [linyersPageV1],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
