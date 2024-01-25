@@ -55,7 +55,7 @@ export const projects: Project[] = [
       "Docker",
       "Nginx",
     ],
-    github: "https://github.com/linyers/LomitosAPI",
+    github: "https://github.com/linyers/lomitos-api",
     website: "https://lomitos-api.vercel.app",
     es: {
       title: "Lomitos API",
