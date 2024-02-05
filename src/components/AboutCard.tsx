@@ -17,7 +17,7 @@ export default function AboutCard() {
         loading="eager"
         priority
       />
-      <div className="h-full w-9/12 md:w-8/12 absolute top-0 left-0 p-6 md:p-8 flex flex-col justify-start">
+      <div className="balanced h-full w-9/12 md:w-8/12 absolute top-0 left-0 p-6 md:p-8 flex flex-col justify-start">
         <h1 className="text-xl md:text-2xl lg:text-5xl font-bold mb-2 md:mb-5 text-slate-600 dark:text-white">
           {t("title")}
         </h1>
