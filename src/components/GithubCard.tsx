@@ -26,10 +26,10 @@ export default function GithubCard() {
         <MdOpenInNew className="absolute right-4 bottom-4 top-auto md:right-8 md:top-8 text-md md:text-xl text-white dark:text-[#ffffffaa]" />
         <div className="w-full h-full flex flex-col justify-between">
           <div className="">
-            <h2 className="text-white text-sm md:text-xl lg:text-3xl font-bold">
+            <h2 className="text-white text-xs sm:text-sm md:text-xl lg:text-3xl font-bold">
               Github
             </h2>
-            <p className="text-white text-xs md:text-md lg:text-2xl lg:mt-4">
+            <p className="text-white text-[10px] sm:text-sm md:text-md lg:text-2xl lg:mt-4">
               {t("description")}
             </p>
           </div>

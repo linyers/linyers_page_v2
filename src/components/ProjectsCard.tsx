@@ -18,10 +18,10 @@ export default function ProjectsCard() {
     >
       <BsArrowRightShort className="absolute right-4 bottom-4 top-auto md:right-8 md:top-8 text-white dark:text-[#ffffffaa] z-10 text-2xl md:text-4xl" />
       <div className="w-full h-full absolute top-0 left-0 text-white p-2 md:p-8 z-10 pointer-events-none">
-        <h2 className="font-bold text-sm md:text-xl lg:text-3xl">
+        <h2 className="font-bold text-xs sm:text-sm md:text-xl lg:text-3xl">
           {t("title")}
         </h2>
-        <p className="font-base text-xs md:text-md lg:text-2xl md:w-4/5 lg:w-5/6 lg:mt-4">
+        <p className="font-base text-[10px] sm:text-sm md:text-md lg:text-2xl md:w-4/5 lg:w-5/6 lg:mt-4">
           {t("description")}
         </p>
       </div>
