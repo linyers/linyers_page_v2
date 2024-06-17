@@ -9,7 +9,7 @@ import cyberCafe from "@/assets/projects/cyber_cafe.png";
 
 export const projects: Project[] = [
   {
-    id: 2,
+    id: 1,
     url: "cyber-cafe",
     images: [cyberCafe],
     tags: ["Django", "JS", "Bootstrap"],
