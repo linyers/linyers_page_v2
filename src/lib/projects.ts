@@ -5,10 +5,29 @@ import ecommerce from "@/assets/projects/ecommerce.jpeg";
 import quiz from "@/assets/projects/quiz.png";
 import pdfGenerator from "@/assets/projects/pdf_generator.png";
 import pomoMon from "@/assets/projects/pomomon.png";
+import cyberCafe from "@/assets/projects/cyber_cafe.png";
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: 2,
+    url: "cyber-cafe",
+    images: [cyberCafe],
+    tags: ["Django", "JS", "Bootstrap"],
+    github: "https://github.com/linyers/cyber-cafe-reservations",
+    website: "",
+    es: {
+      title: "Cyber Café Reservas",
+      description:
+        "Esta es una aplicación para realizar reservas de dispositivos como PC, PlayStation, Nintendo y Xbox. Los usuarios pueden elegir el tipo de dispositivo que desean usar, especificar desde qué hora hasta qué hora quieren utilizarlo y seleccionar el dispositivo específico. Los usuarios pueden ver sus reservas y, para las reservas en curso, pueden ver en tiempo real cuánto tiempo les queda de uso del dispositivo. El administrador tiene la capacidad de añadir nuevos dispositivos y gestionar las reservas de los usuarios. Fue desarrollada con Django, JavaScript Vanilla y Bootstrap.",
+    },
+    en: {
+      title: "Cyber Cafe Reservations",
+      description:
+        "This is an application for booking devices such as PCs, PlayStation, Nintendo, and Xbox. Users can choose the type of device they want to use, specify the start and end times for their usage, and select the specific device. Users can view their reservations, and for ongoing reservations, they can see in real-time how much usage time they have left on the device. The administrator has the ability to add new devices and manage user reservations. It was developed with Django, Vanilla JavaScript, and Bootstrap.",
+    },
+  },
+  {
+    id: 2,
     url: "pdf-generator",
     images: [pdfGenerator],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
@@ -26,7 +45,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 2,
+    id: 3,
     url: "exams-app",
     images: [quiz],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS", "Zustand"],
@@ -44,7 +63,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 3,
+    id: 4,
     url: "lomitos-api",
     images: [lomitosAPI],
     tags: [
@@ -69,7 +88,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 4,
+    id: 5,
     url: "pomomon",
     images: [pomoMon],
     tags: ["React", "Typescript", "Zustand", "TailwindCSS"],
@@ -88,7 +107,7 @@ export const projects: Project[] = [
   },
 
   {
-    id: 5,
+    id: 6,
     url: "ecommerce",
     images: [ecommerce],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS"],
@@ -106,7 +125,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 6,
+    id: 7,
     url: "linyers-page-v1",
     images: [linyersPageV1],
     tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
