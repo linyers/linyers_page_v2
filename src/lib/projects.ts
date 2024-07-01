@@ -6,49 +6,57 @@ import quiz from "@/assets/projects/quiz.png";
 import pdfGenerator from "@/assets/projects/pdf_generator.png";
 import pomoMon from "@/assets/projects/pomomon.png";
 import cyberCafe from "@/assets/projects/cyber_cafe.png";
+import multigtg from "@/assets/projects/multigtg.png";
 
 export const projects: Project[] = [
   {
     id: 1,
-    url: "cyber-cafe",
-    images: [cyberCafe],
-    tags: ["Django", "JS", "Bootstrap"],
-    github: "https://github.com/linyers/cyber-cafe-reservations",
-    website: "",
+    url: "multigtg",
+    images: [multigtg],
+    tags: ["Job", "Django", "JS", "Bootstrap", "Nginx", "Docker", "PostgreSQL"],
+    github: "",
+    website: "http://multigtg.duckdns.org",
     es: {
-      title: "Cyber Café Reservas",
+      title: "MultiGTG",
       description:
-        "Esta es una aplicación para realizar reservas de dispositivos como PC, PlayStation, Nintendo y Xbox. Los usuarios pueden elegir el tipo de dispositivo que desean usar, especificar desde qué hora hasta qué hora quieren utilizarlo y seleccionar el dispositivo específico. Los usuarios pueden ver sus reservas y, para las reservas en curso, pueden ver en tiempo real cuánto tiempo les queda de uso del dispositivo. El administrador tiene la capacidad de añadir nuevos dispositivos y gestionar las reservas de los usuarios. Fue desarrollada con Django, JavaScript Vanilla y Bootstrap.",
+        "Este fue un trabajo que realicé, se trata de una aplicación para subir álbumes de fotos. En la página de inicio se encuentran los álbumes y sus 4 primeras fotos, que se pueden seleccionar en el momento en que se suben las fotos. Hay un buscador para encontrar los títulos y etiquetas que coincidan. La aplicación se desarrolló con Django, JavaScript y Bootstrap. Para desplegar la aplicación se utilizó Nginx y Docker, y para la base de datos se usó PostgreSQL. El cliente estuvo satisfecho con la aplicación y con que haya terminado las funciones importantes en poco tiempo.",
     },
     en: {
-      title: "Cyber Cafe Reservations",
+      title: "MultiGTG",
       description:
-        "This is an application for booking devices such as PCs, PlayStation, Nintendo, and Xbox. Users can choose the type of device they want to use, specify the start and end times for their usage, and select the specific device. Users can view their reservations, and for ongoing reservations, they can see in real-time how much usage time they have left on the device. The administrator has the ability to add new devices and manage user reservations. It was developed with Django, Vanilla JavaScript, and Bootstrap.",
+        "This was a project I worked on; it is an application for uploading photo albums. On the homepage, you can find the albums and their first 4 photos, which can be selected when the photos are uploaded. There is a search feature to find matching titles and tags. The application was developed with Django, JavaScript, and Bootstrap. Nginx and Docker were used to deploy the app, and PostgreSQL was used for the database. The client was satisfied with the app and the fact that I completed the important features in a short time.",
     },
   },
   {
     id: 2,
     url: "pdf-generator",
     images: [pdfGenerator],
-    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
+    tags: ["Job", "DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
     github: "",
     website: "",
     es: {
       title: "Generador de PDF",
       description:
-        "Esta aplicación genera PDFs a partir de CSVs con información de analíticas de Google Ads. Lo que hacía era enviar varios CSVs desde una aplicación de React a una API desarrollada en Django, y la API se encargaba de generar un PDF que era un resumen a través de la información de los CSVs. El resumen era creado mediante inteligencia artificial, y después de ser procesado se guardaba en una base de datos y se enviaba de vuelta a la aplicación de React. Allí, el usuario podía visualizar y/o descargar su resumen generado por IA. Me encargué del desarrollo de la aplicación de React, que es la que ve el usuario, y también de la API y sus respectivas conexiones. No desarrollé el modo en que se realiza la generación del PDF mediante IA, aunque estuve revisando y resolviendo algunos problemas que había en ello. Además, me encargué del despliegue de la API en AWS usando Docker y Nginx.",
+        "Este fue un trabajo que realicé, es una aplicación genera PDFs a partir de CSVs con información de analíticas de Google Ads. Lo que hacía era enviar varios CSVs desde una aplicación de React a una API desarrollada en Django, y la API se encargaba de generar un PDF que era un resumen a través de la información de los CSVs. El resumen era creado mediante inteligencia artificial, y después de ser procesado se guardaba en una base de datos y se enviaba de vuelta a la aplicación de React. Allí, el usuario podía visualizar y/o descargar su resumen generado por IA. Me encargué del desarrollo de la aplicación de React, que es la que ve el usuario, y también de la API y sus respectivas conexiones. No desarrollé el modo en que se realiza la generación del PDF mediante IA, aunque estuve revisando y resolviendo algunos problemas que había en ello. Además, me encargué del despliegue de la API en AWS usando Docker y Nginx.",
     },
     en: {
       title: "PDF Generator",
       description:
-        "This application generates PDFs from CSVs containing Google Ads analytics information. What it did was send several CSVs from a React application to an API developed in Django, and the API was responsible for generating a PDF that summarized the information from the CSVs. The summary was created through artificial intelligence, and after being processed, it was saved in a database and sent back to the React application. There, the user could view and/or download their AI-generated summary. I was responsible for the development of the React application, which is what the user sees, and also the API and its respective connections. I did not develop the way the PDF generation through AI is done, although I was reviewing and solving some problems in that process. Additionally, I handled the deployment of the API on AWS using Docker and Nginx.",
+        "This was a project I worked on; it is an application who generates PDFs from CSVs containing Google Ads analytics information. What it did was send several CSVs from a React application to an API developed in Django, and the API was responsible for generating a PDF that summarized the information from the CSVs. The summary was created through artificial intelligence, and after being processed, it was saved in a database and sent back to the React application. There, the user could view and/or download their AI-generated summary. I was responsible for the development of the React application, which is what the user sees, and also the API and its respective connections. I did not develop the way the PDF generation through AI is done, although I was reviewing and solving some problems in that process. Additionally, I handled the deployment of the API on AWS using Docker and Nginx.",
     },
   },
   {
     id: 3,
     url: "exams-app",
     images: [quiz],
-    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS", "Zustand"],
+    tags: [
+      "Job",
+      "DjangoRest",
+      "PostgreSQL",
+      "ReactJS",
+      "TailwindCSS",
+      "Zustand",
+    ],
     github: "https://github.com/linyers/quiz-django-react",
     website: "",
     es: {
@@ -64,9 +72,28 @@ export const projects: Project[] = [
   },
   {
     id: 4,
+    url: "cyber-cafe",
+    images: [cyberCafe],
+    tags: ["Personal Project", "Django", "JS", "Bootstrap"],
+    github: "https://github.com/linyers/cyber-cafe-reservations",
+    website: "",
+    es: {
+      title: "Cyber Café Reservas",
+      description:
+        "Esta es una aplicación para realizar reservas de dispositivos como PC, PlayStation, Nintendo y Xbox. Los usuarios pueden elegir el tipo de dispositivo que desean usar, especificar desde qué hora hasta qué hora quieren utilizarlo y seleccionar el dispositivo específico. Los usuarios pueden ver sus reservas y, para las reservas en curso, pueden ver en tiempo real cuánto tiempo les queda de uso del dispositivo. El administrador tiene la capacidad de añadir nuevos dispositivos y gestionar las reservas de los usuarios. Fue desarrollada con Django, JavaScript Vanilla y Bootstrap.",
+    },
+    en: {
+      title: "Cyber Cafe Reservations",
+      description:
+        "This is an application for booking devices such as PCs, PlayStation, Nintendo, and Xbox. Users can choose the type of device they want to use, specify the start and end times for their usage, and select the specific device. Users can view their reservations, and for ongoing reservations, they can see in real-time how much usage time they have left on the device. The administrator has the ability to add new devices and manage user reservations. It was developed with Django, Vanilla JavaScript, and Bootstrap.",
+    },
+  },
+  {
+    id: 5,
     url: "lomitos-api",
     images: [lomitosAPI],
     tags: [
+      "Personal Project",
       "DjangoRest",
       "PostgreSQL",
       "ReactJS",
@@ -88,10 +115,10 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 5,
+    id: 6,
     url: "pomomon",
     images: [pomoMon],
-    tags: ["React", "Typescript", "Zustand", "TailwindCSS"],
+    tags: ["Personal Project", "React", "Typescript", "Zustand", "TailwindCSS"],
     github: "https://github.com/linyers/pomomon",
     website: "https://pomomon.vercel.app",
     es: {
@@ -105,12 +132,17 @@ export const projects: Project[] = [
         "PomoMon is a tool designed to improve productivity and time management through the Pomodoro technique. You can configure the time for the pomodoros (work time), breaks, and long breaks. You can also choose an alarm and its volume for when the session ends. This application was created with React and TypeScript, as well as libraries such as Zustand and TailwindCSS.",
     },
   },
-
   {
-    id: 6,
+    id: 7,
     url: "ecommerce",
     images: [ecommerce],
-    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "TailwindCSS"],
+    tags: [
+      "Personal Project",
+      "DjangoRest",
+      "PostgreSQL",
+      "ReactJS",
+      "TailwindCSS",
+    ],
     github: "https://github.com/linyers/Ecommerce-django",
     website: "",
     es: {
@@ -125,10 +157,17 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 7,
+    id: 8,
     url: "linyers-page-v1",
     images: [linyersPageV1],
-    tags: ["DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
+    tags: [
+      "Personal Project",
+      "DjangoRest",
+      "PostgreSQL",
+      "ReactJS",
+      "Docker",
+      "Nginx",
+    ],
     github: "https://github.com/linyers/LinyersPage",
     website: "https://linyers-page.vercel.app",
     es: {
