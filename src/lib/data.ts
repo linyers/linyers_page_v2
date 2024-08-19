@@ -17,13 +17,26 @@ const api = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT,
   clientSecret: process.env.SPOTIFY_SECRET,
   redirectUri: process.env.SPOTIFY_REDIRECT,
+  refreshToken: process.env.SPOTIFY_REFRESH,
 });
+
+const getAccessToken = async () => {
+  const response = await axios.post(
+    "https://accounts.spotify.com/api/token",
+    new URLSearchParams({
+      grant_type: "refresh_token",
+      refresh_token: process.env.SPOTIFY_REFRESH as string,
+      client_id: process.env.SPOTIFY_CLIENT as string,
+      client_secret: process.env.SPOTIFY_SECRET as string,
+    }),
+  );
+  return response.data.access_token;
+};
 
 export async function fetchSpotifyPlaying() {
   try {
-    api.setRefreshToken(process.env.SPOTIFY_REFRESH as string);
-    const data = await api.refreshAccessToken();
-    api.setAccessToken(data.body.access_token);
+    const access_token = await getAccessToken();
+    api.setAccessToken(access_token);
 
     const recentTracks = await api.getMyRecentlyPlayedTracks({
       limit: 1,
@@ -32,7 +45,7 @@ export async function fetchSpotifyPlaying() {
     const track = recentTracks.body.items[0].track;
     return track;
   } catch (err) {
-    console.log("Something went wrong!");
+    console.log("Something went wrong!", err);
   }
 }
 
