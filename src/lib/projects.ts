@@ -7,10 +7,48 @@ import pdfGenerator from "@/assets/projects/pdf_generator.png";
 import pomoMon from "@/assets/projects/pomomon.png";
 import cyberCafe from "@/assets/projects/cyber_cafe.png";
 import multigtg from "@/assets/projects/multigtg.png";
+import sophia_api from "@/assets/projects/sophia_api.png";
+import kalamar_campaigns from "@/assets/projects/kalamar_campaigns.png";
 
 export const projects: Project[] = [
   {
     id: 1,
+    url: "sophia-api",
+    images: [sophia_api],
+    tags: ["Job", "Rest API", "Django", "DjangoRest", "PostgreSQL"],
+    github: "https://github.com/Alejoss/Sophia.AI",
+    website: "",
+    es: {
+      title: "Sophia.AI API",
+      description:
+        "Actualmente, estoy trabajando en una plataforma de enseñanza/aprendizaje descentralizada alojada en blockchain. Me encargo del desarrollo de la API, que está construida con Django REST framework y utiliza una base de datos PostgreSQL. En esta plataforma, los usuarios pueden crear sus propios caminos del conocimiento (similar a cursos) que otros usuarios pueden consumir. Además, los usuarios pueden generar contenido y asociarlo a temas específicos, y este contenido puede ser vinculado a caminos del conocimiento. Los usuarios tienen la posibilidad de reseñar cursos, temas y contenido mediante comentarios y votos, y también pueden realizar donaciones en criptomonedas o acceder a diferentes planes de usuario. En términos generales, la aplicación cubre estas funcionalidades principales.",
+    },
+    en: {
+      title: "Sophia.AI API",
+      description:
+        "I am currently working on a decentralized teaching/learning platform hosted on blockchain, where I am responsible for developing the API, built with Django REST framework and PostgreSQL. In this platform, users can create their own 'knowledge paths' (similar to courses) that others can consume. Additionally, users can create content linked to specific topics, and this content can be associated with knowledge paths. Users can review courses, topics, and content through comments and votes, as well as make cryptocurrency donations and access different user plans. Broadly speaking, these are the core features of the application.",
+    },
+  },
+  {
+    id: 2,
+    url: "kalamar-campaigns",
+    images: [kalamar_campaigns],
+    tags: ["Job", "Next.js", "TailwindCSS", "Material UI"],
+    github: "",
+    website: "http://kalamar.website",
+    es: {
+      title: "Kalamar Campañas",
+      description:
+        "Este proyecto lo realicé para una empresa de marketing, en el cual me encargué del desarrollo del cliente/frontend. Se trata de una aplicación destinada a agilizar la creación y el lanzamiento de campañas publicitarias en diversas plataformas, como Google Ads y Meta Ads. La aplicación cuenta con una página de inicio, opciones de login y registro, y un formulario intuitivo estilo Typeform para crear campañas. La desarrollé utilizando Next.js, con estilos implementados mediante Tailwind CSS y Material-UI (Mui). Además, la aplicación está integrada con tecnologías como Amazon S3 para el almacenamiento de imágenes de las campañas y ChatGPT para la creación de texto publicitario, entre otras.",
+    },
+    en: {
+      title: "Kalamar Campaigns",
+      description:
+        "I developed this project for a marketing company, where I handled the client/frontend side of an application designed to streamline the creation and launch of advertising campaigns on various platforms, such as Google Ads and Meta Ads. The application includes a homepage, login and signup options, and an intuitive Typeform-style form for campaign creation. I built it using Next.js, with styling implemented through Tailwind CSS and Material-UI (Mui). Additionally, the application is integrated with technologies like Amazon S3 for campaign image storage and ChatGPT for generating advertising text, among others.",
+    },
+  },
+  {
+    id: 3,
     url: "multigtg",
     images: [multigtg],
     tags: ["Job", "Django", "JS", "Bootstrap", "Nginx", "Docker", "PostgreSQL"],
@@ -28,7 +66,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 2,
+    id: 4,
     url: "pdf-generator",
     images: [pdfGenerator],
     tags: ["Job", "DjangoRest", "PostgreSQL", "ReactJS", "Docker", "Nginx"],
@@ -46,7 +84,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 3,
+    id: 5,
     url: "exams-app",
     images: [quiz],
     tags: [
@@ -71,7 +109,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 4,
+    id: 6,
     url: "cyber-cafe",
     images: [cyberCafe],
     tags: ["Personal Project", "Django", "JS", "Bootstrap"],
@@ -89,7 +127,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 5,
+    id: 7,
     url: "lomitos-api",
     images: [lomitosAPI],
     tags: [
@@ -115,7 +153,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 6,
+    id: 8,
     url: "pomomon",
     images: [pomoMon],
     tags: ["Personal Project", "React", "Typescript", "Zustand", "TailwindCSS"],
@@ -133,7 +171,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 7,
+    id: 9,
     url: "ecommerce",
     images: [ecommerce],
     tags: [
@@ -157,7 +195,7 @@ export const projects: Project[] = [
     },
   },
   {
-    id: 8,
+    id: 10,
     url: "linyers-page-v1",
     images: [linyersPageV1],
     tags: [
